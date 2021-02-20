@@ -21,35 +21,56 @@
 </head>
 
 <body>
+  <section class="section">
 
+    <div class="container ">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by2">
+                <img src="vsBanner.png" alt="">
+              </figure>
+            </div>
+            <header class="card-header">
+              <p class="card-header-title">
+                Score Keeper
+              </p>
 
+            </header>
 
-  <h1>Score Keeper</h1>
+            <div class="card-content">
+              <div class="content">
+                <h1 class="title is-2"><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
+                <p class="subtitle">Use the buttons below to keep score</p>
+              </div>
+              <label for="rounds" class="label is-medium is-inline">First to:</label>
+              <div class="select is-small">
+                <select id="rounds">
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <button class="button is-danger card-footer-item" id="p1Point">
+                Player One +1</button>
+              <button class="button is-info card-footer-item" id="p2Point">
+                Player Two +1</button>
+              <button class="button is-warning card-footer-item" id="reset">
+                Reset</button>
 
-  <div>
-    <h2><span id="p1Display">0</span> to <span id="p2Display">0</span></h2>
-  </div>
-  <p>Use the buttons below to keep score.</p>
-
-  <h3>Playing to:</h3>
-  <select name="rounds" id="rounds">
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-  </select>
-
-  <div>
-    <button id="p1Point">+1 Player One</button>
-    <button id="p2Point">+1 Player Two</button>
-    <button id="reset">Reset</button>
-  </div>
-
-
-
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script src="app.js"></script>
 </body>

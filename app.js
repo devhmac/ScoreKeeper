@@ -4,30 +4,47 @@ const p2Point = document.querySelector('#p2Point');
 const resetButton = document.querySelector('#reset');
 const rounds = document.querySelector('#rounds')
 //values
-const p1Score = document.querySelector('#p1Score');
-const p2Score = document.querySelector('#p2Score');
+const p1Display = document.querySelector('#p1Display');
+const p2Display = document.querySelector('#p2Display');
+
+let p1Score = 0;
+let p2Score = 0;
+let roundNums = 5;
 
 
-rounds.addEventListener('change', (e) => {
-  console.log(Number(rounds.value));
-})
+
+
+// rounds.addEventListener('change', () => {
+//   console.log(rounds.value);
+//   roundNums = rounds.Value;
+//   console.log(roundNums);
+// })
+
 
 p1Point.addEventListener('click', () => {
-  addPoint(p1Score);
+  if (p1Score !== roundNums && p2Score !== roundNums) {
+    p1Score += 1
+    p1Display.innerText = p1Score;
+  }
+
 })
 
+
 p2Point.addEventListener('click', () => {
-  addPoint(p2Score);
+  if (p1Score !== roundNums && p2Score !== roundNums) {
+    p2Score += 1;
+    p2Display.innerText = p2Score;
+  }
 })
 
 resetButton.addEventListener('click', () => {
-  p1Score.innerText = 0
-  p2Score.innerText = 0
+  p1Score = 0;
+  p2Score = 0;
+  p1Display.innerText = p1Score;
+  p2Display.innerText = p2Score;
 })
 
 
-function addPoint(playerScore) {
-  playerScore.innerHTML = Number(playerScore.innerHTML) + 1
-}
+
 
 

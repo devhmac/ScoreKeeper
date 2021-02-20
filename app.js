@@ -15,7 +15,7 @@ let roundNums = Number(rounds.value);
 
 
 
-p1Point.addEventListener('click', () => {
+p1Point.addEventListener('click', () => { //updateing player 1 score, and determining win con
   if (p1Score !== roundNums && p2Score !== roundNums) { //have to put the logic inside the event listener, this  will change what the targeted element does
     p1Score += 1
     p1Display.innerText = p1Score;
@@ -25,7 +25,7 @@ p1Point.addEventListener('click', () => {
     p2Display.classList.add('loser');
   }
 })
-
+// p1Point & p2Point are super redundant, could probably find a way to incorperate into a function
 
 p2Point.addEventListener('click', () => {
   if (p1Score !== roundNums && p2Score !== roundNums) {

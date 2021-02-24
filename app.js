@@ -56,7 +56,5 @@ function reset() { // refactored to loop through each players properties, instea
     p.display.innerText = p.score;
     p.display.classList.remove('winner', 'loser');
     p.button.disabled = false
-
-
   }
 }
